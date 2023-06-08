@@ -33,9 +33,6 @@ public class TimeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("/text/html");
-
-        Context simplContext = new Context();
-        engine.process("test.html", simplContext, resp.getWriter());
         resp.getWriter().close();
     }
 }
