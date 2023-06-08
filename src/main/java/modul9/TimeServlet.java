@@ -65,7 +65,7 @@ public class TimeServlet extends HttpServlet {
         resp.setContentType("text/html");
         Context context = new Context();
         context.setVariable("time", currentTime);
-        engine.process("test", context, resp.getWriter());
+        engine.process("currentTime", context, resp.getWriter());
 
         resp.getWriter().close();
     }
