@@ -3,6 +3,7 @@ package modul9;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.FileTemplateResolver;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class TimeServlet extends HttpServlet {
     public void init() throws ServletException {
         engine = new TemplateEngine();
 
-        FileTemplateResolver resolver = new FileTemplateResolver();
+        ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
         resolver.setPrefix("/templates/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML5");
